@@ -307,15 +307,15 @@ button,
 }
 .w-form-done {
   display: none;
-  padding: 20px;
-  text-align: center;
-  background-color: #dddddd;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: green;
 }
 .w-form-fail {
   display: none;
   margin-top: 10px;
   padding: 10px;
-  background-color: #ffdede;
+  background-color: red;
 }
 label {
   display: block;
@@ -331,7 +331,7 @@ label {
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
+  /*color: #333333;*/
   vertical-align: middle;
   background-color: #ffffff;
   border: 1px solid #cccccc;

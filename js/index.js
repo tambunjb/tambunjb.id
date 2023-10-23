@@ -8,7 +8,7 @@ function submitToAPI(e) {
           return;
       }
       var mobilere = /[0-9]{10}/;
-      if (!mobilere.test($("#phone-input").val())) {
+      if ($("#phone-input").val()!="" && !mobilere.test($("#phone-input").val())) {
           alert ("Please enter valid mobile number");
           return;
       }
@@ -46,13 +46,17 @@ function submitToAPI(e) {
 
    
    success: function () {
-     // clear form and show a success message
-     alert("Successfull");
+     document.getElementsByClassName('w-form-done')[0].style.display = 'block';
+     setTimeout(() => {
+        document.getElementsByClassName('w-form-done')[0].style.display = 'none';
+      }, 10 * 1000);
      document.getElementById("contact-me-form").reset();
- location.reload();
+ //location.reload();
    },
    error: function () {
-     // show an error message
-     alert("UnSuccessfull");
+     document.getElementsByClassName('w-form-fail')[0].style.display = 'block';
+     setTimeout(() => {
+        document.getElementsByClassName('w-form-fail')[0].style.display = 'none';
+      }, 10 * 1000);
    }});
 }
